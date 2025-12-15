@@ -1,0 +1,6 @@
+services:
+  web-api-elk:
+    image: ${DOCKER_REGISTRY-}webapielk
+    build:
+      context: .
+      dockerfile: src/web-api-elk/Dockerfile

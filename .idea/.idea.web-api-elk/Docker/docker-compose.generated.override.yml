@@ -1,0 +1,20 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  web-api-elk:
+    build:
+      context: "D:\\my-git-project\\netcore\\web-api-elk"
+      dockerfile: "src/web-api-elk/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/web-api-elk.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapielk:dev"
+    ports: []
+    volumes:
+    - "D:\\my-git-project\\netcore\\web-api-elk\\src\\web-api-elk:/app:rw"
+    - "D:\\my-git-project\\netcore\\web-api-elk:/src:rw"
+    - "C:\\Users\\itguy\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
